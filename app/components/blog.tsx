@@ -35,7 +35,7 @@ export default function Blog() {
     const regularPosts = blogPosts.slice(1);
 
     return (
-        <div className="flex w-full max-w-[1920px] pt-[80px] px-[20px] md:px-[100px] xl:px-[180px] pb-[80px] flex-col items-center flex-nowrap bg-[#f0f0f0] relative overflow-hidden mx-auto my-0">
+        <div className="flex w-full max-w-[1920px] py-12 md:py-[80px] px-4 md:px-[100px] xl:px-[180px] flex-col items-center flex-nowrap bg-[#f0f0f0] relative overflow-hidden mx-auto my-0">
             <div className="flex w-full max-w-[1100px] flex-col gap-[32px] items-center shrink-0 flex-nowrap relative">
 
                 {/* Header */}

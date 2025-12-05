@@ -83,7 +83,7 @@ const TestimonialCard = ({ data }: { data: typeof testimonialsTop[0] }) => (
 
 export default function Testimonials() {
     return (
-        <div className="w-full max-w-[1920px] py-[80px] flex flex-col gap-[60px] items-center overflow-hidden mx-auto bg-[#f0f0f0]">
+        <div className="w-full max-w-[1920px] py-12 md:py-[80px] flex flex-col gap-[60px] items-center overflow-hidden mx-auto bg-[#f0f0f0]">
 
             {/* Header */}
             <div className="flex flex-col gap-[16px] items-center px-[20px] text-center z-10">

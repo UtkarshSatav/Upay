@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function HowItWorks() {
     return (
-        <div className="main-container flex w-full max-w-[1920px] pt-[80px] px-[20px] md:px-[100px] xl:px-[410px] pb-[80px] justify-center items-start flex-nowrap relative overflow-hidden mx-auto my-0 bg-[#f0f0f0]">
+        <div className="main-container flex w-full max-w-[1920px] py-12 md:py-[80px] px-4 md:px-[100px] xl:px-[410px] justify-center items-start flex-nowrap relative overflow-hidden mx-auto my-0 bg-[#f0f0f0]">
             <div className="flex w-full max-w-[1100px] flex-col gap-[32px] items-center shrink-0 flex-nowrap relative">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -26,10 +26,10 @@ export default function HowItWorks() {
                         </div>
                     </div>
                     <div className="w-full max-w-[600px] shrink-0 text-[0px] relative z-[8] text-center">
-                        <span className="font-['Inter'] text-[40px] md:text-[52px] font-semibold leading-[1.2] text-[#151621] tracking-[-2.6px] relative z-[9]">
+                        <span className="font-['Inter'] text-[32px] md:text-[52px] font-semibold leading-[1.2] text-[#151621] tracking-[-1.5px] md:tracking-[-2.6px] relative z-[9]">
                             Get started in <br />
                         </span>
-                        <span className="font-['Inter'] text-[40px] md:text-[52px] font-semibold leading-[1.2] text-[#151621] tracking-[-2.6px] relative z-10">
+                        <span className="font-['Inter'] text-[32px] md:text-[52px] font-semibold leading-[1.2] text-[#151621] tracking-[-1.5px] md:tracking-[-2.6px] relative z-10">
                             three simple steps.
                         </span>
                     </div>
@@ -42,7 +42,7 @@ export default function HowItWorks() {
                         </span>
                     </div>
                 </motion.div>
-                <div className="flex flex-row gap-[26px] justify-center items-start self-stretch shrink-0 flex-nowrap relative z-[14]">
+                <div className="flex flex-col md:flex-row gap-[26px] justify-center items-start self-stretch shrink-0 flex-nowrap relative z-[14]">
                     {/* Step 1 */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -51,13 +51,13 @@ export default function HowItWorks() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="flex w-full md:w-[349.33px] flex-col items-start shrink-0 flex-nowrap relative z-[15]"
                     >
-                        <div className="flex pt-[32px] pr-[32px] pb-[32px] pl-[32px] flex-col gap-[32px] items-start self-stretch shrink-0 flex-nowrap bg-[#fff] rounded-[20px] relative overflow-hidden shadow-[0_7px_21px_0_rgba(8,203,0,0.03)] z-[16]">
+                        <div className="flex p-6 md:p-[32px] flex-col gap-[32px] items-start self-stretch shrink-0 flex-nowrap bg-[#fff] rounded-[20px] relative overflow-hidden shadow-[0_7px_21px_0_rgba(8,203,0,0.03)] z-[16]">
                             <div className="h-[200px] self-stretch shrink-0 relative z-[17]">
                                 <div className="flex h-[200px] justify-center items-center flex-nowrap rounded-[15px] absolute top-0 left-0 right-0 z-[18] overflow-hidden">
                                     <img src="/How section/How-img-1.png" className="w-full h-full object-cover" alt="Step 1" />
                                 </div>
                             </div>
-                            <div className="flex pt-0 pr-[24px] pb-0 pl-0 flex-col gap-[15px] items-start self-stretch shrink-0 flex-nowrap relative z-20">
+                            <div className="flex pt-0 pr-0 md:pr-[24px] pb-0 pl-0 flex-col gap-[15px] items-start self-stretch shrink-0 flex-nowrap relative z-20">
                                 <div className="flex w-[57px] pt-[5px] pr-[10px] pb-[5px] pl-[10px] justify-center items-center shrink-0 flex-nowrap rounded-[10px] relative overflow-hidden shadow-[0_7px_21px_0_rgba(8,203,0,0.24)] z-[21] bg-[#08CB00]">
                                     <div className="flex w-[37px] flex-col items-start shrink-0 flex-nowrap relative z-[22]">
                                         <div className="flex flex-col items-start self-stretch shrink-0 flex-nowrap relative z-[23]">
@@ -77,9 +77,9 @@ export default function HowItWorks() {
                                     </div>
                                     <div className="flex flex-col items-start self-stretch shrink-0 flex-nowrap relative z-[29]">
                                         <div className="flex flex-col items-start self-stretch shrink-0 flex-nowrap relative z-30">
-                                            <span className="flex w-full h-[72px] justify-start items-center self-stretch shrink-0 font-['Inter'] text-[16px] font-medium leading-[24px] text-[#7a7a7a] tracking-[-0.32px] relative text-left overflow-hidden z-[31]">
-                                                Add our SDK with just 10 lines of <br />
-                                                code. Python, JS, or Go—your <br />
+                                            <span className="flex w-full h-auto md:h-[72px] justify-start items-center self-stretch shrink-0 font-['Inter'] text-[16px] font-medium leading-[24px] text-[#7a7a7a] tracking-[-0.32px] relative text-left overflow-hidden z-[31]">
+                                                Add our SDK with just 10 lines of <br className="hidden md:block" />
+                                                code. Python, JS, or Go—your <br className="hidden md:block" />
                                                 choice. Super easy setup.
                                             </span>
                                         </div>
@@ -96,13 +96,13 @@ export default function HowItWorks() {
                         transition={{ duration: 0.5, delay: 0.4 }}
                         className="flex w-full md:w-[349.33px] flex-col items-start shrink-0 flex-nowrap relative z-[32]"
                     >
-                        <div className="flex pt-[32px] pr-[32px] pb-[32px] pl-[32px] flex-col gap-[32px] items-start self-stretch shrink-0 flex-nowrap bg-[#fff] rounded-[20px] relative overflow-hidden shadow-[0_7px_21px_0_rgba(8,203,0,0.03)] z-[33]">
+                        <div className="flex p-6 md:p-[32px] flex-col gap-[32px] items-start self-stretch shrink-0 flex-nowrap bg-[#fff] rounded-[20px] relative overflow-hidden shadow-[0_7px_21px_0_rgba(8,203,0,0.03)] z-[33]">
                             <div className="h-[200px] self-stretch shrink-0 relative z-[34]">
                                 <div className="flex h-[200px] justify-center items-center flex-nowrap rounded-[15px] absolute top-0 left-0 right-0 z-[35] overflow-hidden">
                                     <img src="/How section/How-img-2.png" className="w-full h-full object-cover" alt="Step 2" />
                                 </div>
                             </div>
-                            <div className="flex pt-0 pr-[24px] pb-0 pl-0 flex-col gap-[15px] items-start self-stretch shrink-0 flex-nowrap relative z-[37]">
+                            <div className="flex pt-0 pr-0 md:pr-[24px] pb-0 pl-0 flex-col gap-[15px] items-start self-stretch shrink-0 flex-nowrap relative z-[37]">
                                 <div className="flex w-[59px] pt-[5px] pr-[10px] pb-[5px] pl-[10px] justify-center items-center shrink-0 flex-nowrap rounded-[10px] relative overflow-hidden shadow-[0_7px_21px_0_rgba(8,203,0,0.24)] z-[38] bg-[#08CB00]">
                                     <div className="flex w-[39px] flex-col items-start shrink-0 flex-nowrap relative z-[39]">
                                         <div className="flex flex-col items-start self-stretch shrink-0 flex-nowrap relative z-40">
@@ -122,9 +122,9 @@ export default function HowItWorks() {
                                     </div>
                                     <div className="flex flex-col items-start self-stretch shrink-0 flex-nowrap relative z-[46]">
                                         <div className="flex flex-col items-start self-stretch shrink-0 flex-nowrap relative z-[47]">
-                                            <span className="flex w-full h-[72px] justify-start items-center self-stretch shrink-0 font-['Inter'] text-[16px] font-medium leading-[24px] text-[#7a7a7a] tracking-[-0.32px] relative text-left overflow-hidden z-[48]">
-                                                Automatic tracking of tokens, API <br />
-                                                calls, compute costs across all AI <br />
+                                            <span className="flex w-full h-auto md:h-[72px] justify-start items-center self-stretch shrink-0 font-['Inter'] text-[16px] font-medium leading-[24px] text-[#7a7a7a] tracking-[-0.32px] relative text-left overflow-hidden z-[48]">
+                                                Automatic tracking of tokens, API <br className="hidden md:block" />
+                                                calls, compute costs across all AI <br className="hidden md:block" />
                                                 vendors. Real-time visibility.
                                             </span>
                                         </div>
@@ -141,13 +141,13 @@ export default function HowItWorks() {
                         transition={{ duration: 0.5, delay: 0.6 }}
                         className="flex w-full md:w-[349.33px] flex-col items-start shrink-0 flex-nowrap relative z-[49]"
                     >
-                        <div className="flex pt-[32px] pr-[32px] pb-[32px] pl-[32px] flex-col gap-[32px] items-start self-stretch shrink-0 flex-nowrap bg-[#fff] rounded-[20px] relative overflow-hidden shadow-[0_7px_21px_0_rgba(8,203,0,0.03)] z-50">
+                        <div className="flex p-6 md:p-[32px] flex-col gap-[32px] items-start self-stretch shrink-0 flex-nowrap bg-[#fff] rounded-[20px] relative overflow-hidden shadow-[0_7px_21px_0_rgba(8,203,0,0.03)] z-50">
                             <div className="h-[200px] self-stretch shrink-0 relative z-[51]">
                                 <div className="flex h-[200px] justify-center items-center flex-nowrap rounded-[15px] absolute top-0 left-0 right-0 z-[52] overflow-hidden">
                                     <img src="/How section/How-img-3.png" className="w-full h-full object-cover" alt="Step 3" />
                                 </div>
                             </div>
-                            <div className="flex pt-0 pr-[24px] pb-0 pl-0 flex-col gap-[15px] items-start self-stretch shrink-0 flex-nowrap relative z-[54]">
+                            <div className="flex pt-0 pr-0 md:pr-[24px] pb-0 pl-0 flex-col gap-[15px] items-start self-stretch shrink-0 flex-nowrap relative z-[54]">
                                 <div className="flex w-[59px] pt-[5px] pr-[10px] pb-[5px] pl-[10px] justify-center items-center shrink-0 flex-nowrap rounded-[10px] relative overflow-hidden shadow-[0_7px_21px_0_rgba(8,203,0,0.24)] z-[55] bg-[#08CB00]">
                                     <div className="flex w-[39px] flex-col items-start shrink-0 flex-nowrap relative z-[56]">
                                         <div className="flex flex-col items-start self-stretch shrink-0 flex-nowrap relative z-[57]">
@@ -167,9 +167,9 @@ export default function HowItWorks() {
                                     </div>
                                     <div className="flex flex-col items-start self-stretch shrink-0 flex-nowrap relative z-[63]">
                                         <div className="flex flex-col items-start self-stretch shrink-0 flex-nowrap relative z-[64]">
-                                            <span className="flex w-full h-[72px] justify-start items-center self-stretch shrink-0 font-['Inter'] text-[16px] font-medium leading-[24px] text-[#7a7a7a] tracking-[-0.32px] relative text-left overflow-hidden z-[65]">
-                                                Get real-time insights, automate <br />
-                                                billing, and maximize your margins <br />
+                                            <span className="flex w-full h-auto md:h-[72px] justify-start items-center self-stretch shrink-0 font-['Inter'] text-[16px] font-medium leading-[24px] text-[#7a7a7a] tracking-[-0.32px] relative text-left overflow-hidden z-[65]">
+                                                Get real-time insights, automate <br className="hidden md:block" />
+                                                billing, and maximize your margins <br className="hidden md:block" />
                                                 with actionable analytics.
                                             </span>
                                         </div>

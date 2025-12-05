@@ -1,9 +1,13 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 
 export default function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
         <div className="w-full h-[82px] flex flex-col items-start flex-nowrap fixed top-0 left-0 z-[100] bg-white">
-            <div className="flex pt-[20px] pr-[64px] pb-[20px] pl-[64px] justify-center items-center self-stretch shrink-0 flex-nowrap bg-[#fff] relative overflow-hidden shadow-[0_-7px_21px_0_rgba(0,0,0,0.03)]">
+            <div className="flex px-4 md:px-[64px] py-[20px] justify-center items-center self-stretch shrink-0 flex-nowrap bg-[#fff] relative overflow-visible shadow-[0_-7px_21px_0_rgba(0,0,0,0.03)]">
                 <div className="flex w-full max-w-[1920px] gap-[20px] justify-between items-center shrink-0 flex-nowrap relative z-[1]">
                     {/* Logo Section */}
                     <div className="flex items-center shrink-0 flex-nowrap relative z-[2]">
@@ -23,8 +27,8 @@ export default function Navbar() {
                         </div>
                     </div>
 
-                    {/* Navigation Links */}
-                    <div className="flex gap-[16px] justify-center items-center flex-nowrap relative">
+                    {/* Navigation Links - Desktop */}
+                    <div className="hidden md:flex gap-[16px] justify-center items-center flex-nowrap relative">
                         <a href="#blog" className="flex pt-[8px] pr-[8px] pb-[8px] pl-[8px] justify-center items-center flex-nowrap">
                             <span className="font-['Inter'] text-[16px] font-medium leading-[22.4px] text-[#7a7a7a] tracking-[-0.48px] whitespace-nowrap hover:text-[#0a0b10] transition-colors">
                                 Blog
@@ -47,8 +51,8 @@ export default function Navbar() {
                         </a>
                     </div>
 
-                    {/* CTA Buttons */}
-                    <div className="flex gap-[10px] justify-end items-center shrink-0 flex-nowrap relative">
+                    {/* CTA Buttons - Desktop */}
+                    <div className="hidden md:flex gap-[10px] justify-end items-center shrink-0 flex-nowrap relative">
                         {/* Contact Button */}
                         <button className="flex h-[42px] pt-0 pr-[16px] pb-0 pl-[16px] gap-[8px] justify-center items-center shrink-0 flex-nowrap bg-[#fff] rounded-[12px] relative overflow-hidden border-2 border-[rgba(232,232,233,0.75)] hover:border-[#08CB00] transition-colors">
                             <span className="font-['Inter'] text-[15px] font-semibold leading-[18px] text-[#0a0b10] tracking-[-0.3px] whitespace-nowrap">
@@ -69,8 +73,42 @@ export default function Navbar() {
                             </svg>
                         </button>
                     </div>
+
+                    {/* Mobile Menu Button */}
+                    <div className="flex md:hidden items-center">
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className="p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                {isMenuOpen ? (
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                ) : (
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                                )}
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
+
+            {/* Mobile Menu Dropdown */}
+            {isMenuOpen && (
+                <div className="w-full bg-white shadow-lg md:hidden absolute top-[82px] left-0 flex flex-col p-4 gap-4 border-t border-gray-100">
+                    <a href="#blog" className="text-[16px] font-medium text-[#7a7a7a] hover:text-[#0a0b10] py-2" onClick={() => setIsMenuOpen(false)}>Blog</a>
+                    <a href="#updates" className="text-[16px] font-medium text-[#7a7a7a] hover:text-[#0a0b10] py-2" onClick={() => setIsMenuOpen(false)}>Updates</a>
+                    <a href="#pricing" className="text-[16px] font-medium text-[#7a7a7a] hover:text-[#0a0b10] py-2" onClick={() => setIsMenuOpen(false)}>Pricing</a>
+                    <a href="#faqs" className="text-[16px] font-medium text-[#7a7a7a] hover:text-[#0a0b10] py-2" onClick={() => setIsMenuOpen(false)}>FAQs</a>
+                    <div className="flex flex-col gap-3 mt-2">
+                        <button className="flex w-full h-[42px] justify-center items-center gap-[8px] bg-[#fff] rounded-[12px] border-2 border-[rgba(232,232,233,0.75)] hover:border-[#08CB00] transition-colors">
+                            <span className="font-['Inter'] text-[15px] font-semibold text-[#0a0b10]">Contact</span>
+                        </button>
+                        <button className="flex w-full h-[42px] justify-center items-center gap-[8px] rounded-[12px] bg-linear-to-br from-green-600 to-green-500 text-white shadow-[0_4px_4px_0_rgba(8,203,0,0.3)]">
+                            <span className="font-['Inter'] text-[15px] font-semibold">Join waitlist</span>
+                        </button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

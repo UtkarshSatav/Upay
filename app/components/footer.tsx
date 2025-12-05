@@ -4,7 +4,7 @@ import { ArrowRight, Twitter, Linkedin, Facebook, Instagram } from "lucide-react
 
 export default function Footer() {
     return (
-        <div className="flex w-full max-w-[1920px] pt-[120px] px-[20px] md:px-[100px] xl:px-[180px] pb-[24px] justify-center items-start flex-nowrap bg-[#fff] relative overflow-hidden shadow-[0_-7px_21px_0_rgba(0,0,0,0.03)] mx-auto my-0">
+        <div className="flex w-full max-w-[1920px] pt-12 md:pt-[120px] px-4 md:px-[100px] xl:px-[180px] pb-[24px] justify-center items-start flex-nowrap bg-[#fff] relative overflow-hidden shadow-[0_-7px_21px_0_rgba(0,0,0,0.03)] mx-auto my-0">
             <div className="flex w-full max-w-[1100px] flex-col gap-[80px] justify-center items-center flex-nowrap relative">
 
                 {/* CTA Section */}

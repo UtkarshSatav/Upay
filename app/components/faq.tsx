@@ -39,7 +39,7 @@ export default function FAQ() {
     };
 
     return (
-        <div className="main-container flex w-full max-w-[1920px] pt-[80px] px-[20px] md:px-[100px] xl:px-[410px] pb-[80px] justify-center items-start flex-nowrap bg-[#f0f0f0] relative overflow-hidden mx-auto my-0">
+        <div className="main-container flex w-full max-w-[1920px] py-12 md:py-[80px] px-4 md:px-[100px] xl:px-[410px] justify-center items-start flex-nowrap bg-[#f0f0f0] relative overflow-hidden mx-auto my-0">
             <div className="flex w-full max-w-[1100px] flex-col xl:flex-row gap-[48px] justify-center items-start shrink-0 flex-nowrap relative">
 
                 {/* Left Content */}

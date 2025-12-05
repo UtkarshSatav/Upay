@@ -47,13 +47,13 @@ export default function UserInfo() {
     };
 
     return (
-        <div className="main-container flex w-full max-w-[1920px] pt-[80px] px-[20px] md:px-[100px] xl:px-[410px] pb-[80px] flex-col items-center flex-nowrap relative overflow-hidden mx-auto my-0 bg-[#f0f0f0]">
+        <div className="main-container flex w-full max-w-[1920px] py-12 md:py-[80px] px-4 md:px-[100px] xl:px-[410px] flex-col items-center flex-nowrap relative overflow-hidden mx-auto my-0 bg-[#f0f0f0]">
             <div className="flex flex-col gap-[32px] justify-center items-start self-stretch shrink-0 flex-nowrap relative">
                 {/* Header Section */}
                 <div className="flex flex-col xl:flex-row gap-[12px] justify-center items-start xl:items-end self-stretch shrink-0 flex-nowrap relative z-[1]">
                     <div className="flex w-full xl:w-[768px] flex-col items-start shrink-0 flex-nowrap relative z-[2]">
                         <div className="flex w-full max-w-[540px] pt-0 pr-0 pb-[0.61px] pl-0 flex-col items-start shrink-0 flex-nowrap relative z-[3]">
-                            <span className="flex w-full justify-start items-center shrink-0 font-['Inter'] text-[40px] md:text-[52px] font-semibold leading-[1.2] text-[#151621] tracking-[-2.6px] relative text-left overflow-hidden z-[4]">
+                            <span className="flex w-full justify-start items-center shrink-0 font-['Inter'] text-[32px] md:text-[52px] font-semibold leading-[1.2] text-[#151621] tracking-[-1.5px] md:tracking-[-2.6px] relative text-left overflow-hidden z-[4]">
                                 All-in-one dashboard <br />
                                 for your business.
                             </span>
@@ -83,8 +83,8 @@ export default function UserInfo() {
                             >
                                 <div
                                     className={`flex p-[20px] flex-col justify-center items-start self-stretch shrink-0 flex-nowrap bg-[#fff] rounded-[10px] relative overflow-hidden transition-all duration-300 ${activeTab === tab.id
-                                            ? "shadow-[0_7px_21px_0_rgba(8,203,0,0.1)]"
-                                            : "shadow-none hover:bg-gray-50"
+                                        ? "shadow-[0_7px_21px_0_rgba(8,203,0,0.1)]"
+                                        : "shadow-none hover:bg-gray-50"
                                         }`}
                                 >
                                     <div className="flex flex-col justify-center items-start self-stretch shrink-0 flex-nowrap relative">
@@ -124,7 +124,7 @@ export default function UserInfo() {
                     </div>
 
                     {/* Right Side: Image */}
-                    <div className="w-full xl:w-[684px] h-[400px] md:h-[636px] shrink-0 relative z-[48]">
+                    <div className="w-full xl:w-[684px] h-[300px] md:h-[636px] shrink-0 relative z-[48]">
                         <div className="flex w-full h-full p-[12px] flex-col items-start flex-nowrap bg-[#f8f8fa] rounded-[31.31px] relative z-[49]">
                             <div className="w-full h-full self-stretch shrink-0 rounded-[20px] relative z-50 overflow-hidden">
                                 <AnimatePresence mode="wait">
